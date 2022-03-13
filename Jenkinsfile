@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Création Artefact') {
             steps {
-                sh "echo $(date) > date.txt"
+                sh "echo `date` > date.txt"
                 sh "tar cvfz date.tar.gz date.txt"
             }
         }
