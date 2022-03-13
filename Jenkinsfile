@@ -1,14 +1,15 @@
 pipeline {
     agent any
     stages {
-        stage('Initialisation') {
+        stage('Création Artefact') {
             steps {
-                git url: 'https://github.com/Bigouden/jenkins-pipeline.git', branch: 'master'
+                sh "echo $(date) > date.txt"
+                sh "tar cvfz date.tar.gz date.txt"
             }
         }
-        stage('Test') {
+        stage('Upload Artefact') {
             steps {
-                echo "toto"
+                sh "ls -ralit"
             }
         }
     }
