@@ -25,7 +25,7 @@ pipeline {
                     repository: NEXUS_REPOSITORY,
                     credentialsId: NEXUS_CREDENTIAL_ID,
                     artifacts: [
-                        [artifactId: pom.artifactId,
+                        [artifactId: 'test',
                          classifier: '',
                          file: 'date.tar.gz',
                          type: 'tar.gz'],
