@@ -21,7 +21,7 @@ pipeline {
                     nexusVersion: NEXUS_VERSION,
                     protocol: NEXUS_PROTOCOL,
                     nexusUrl: NEXUS_URL,
-                    version: 'DATE-SNAPSHOT,
+                    version: 'DATE-SNAPSHOT',
                     repository: NEXUS_REPOSITORY,
                     credentialsId: NEXUS_CREDENTIAL_ID,
                     artifacts: [
