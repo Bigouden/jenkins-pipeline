@@ -21,13 +21,13 @@ pipeline {
                     nexusVersion: NEXUS_VERSION,
                     protocol: NEXUS_PROTOCOL,
                     nexusUrl: NEXUS_URL,
-                    version: 'DATE-SNAPSHOT',
+                    version: 'version',
                     groupId: 'group_id',
                     repository: NEXUS_REPOSITORY,
                     credentialsId: NEXUS_CREDENTIAL_ID,
                     artifacts: [
-                        [artifactId: 'test',
-                         classifier: '',
+                        [artifactId: 'artifact_id',
+                         classifier: 'classifier',
                          file: 'date.tar.gz',
                          type: 'tar.gz'],
                     ]
