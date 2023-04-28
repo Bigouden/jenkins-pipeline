@@ -1,14 +1,13 @@
 pipeline {
     agent {
-        label 'docker' 
+        docker {
+            image 'alpine:3.17'
+            args  '-v /tmp:/tmp'
+        }
     }
     stages {
         stage('Test') {
-            agent {
-                docker {
-                    image 'alpine:3.17'
-                    args  '-v /tmp:/tmp'
-                }
+
             }
             steps {
                 sh 'ls -Ralit'
